@@ -1,1 +1,0 @@
-Upload this folder to your GitHub Pages repository root. To add photos, put images into the corresponding assets/products/<category>/ folder and keep or update index.json in that folder if needed.
