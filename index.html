@@ -1,9 +1,114 @@
-<!DOCTYPE html><html><head><meta charset='utf-8'><link rel='stylesheet' href='styles.css'><title>Color Wing</title></head>
-<body><header><h1>Color Wing</h1><nav><a href='about.html'>About</a> <a href='cases.html'>Cases</a> <a href='contact.html'>Contact</a></nav></header>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='styles.css'>
+    <title>Color Wing</title>
+
+    <style>
+        /* --- HERO 大圖 --- */
+        .hero {
+            width: 100%;
+            height: 60vh;
+            background: linear-gradient(rgba(0,10,40,0.5), rgba(0,10,40,0.5)),
+                        url('images/banner.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            letter-spacing: 3px;
+            margin: 0;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* --- 3 大產品卡片 --- */
+        .home-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+        .home-card {
+            width: 300px;
+            background: #fff;
+            color: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.15);
+            text-align: center;
+            text-decoration: none;
+        }
+        .home-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .home-card h3 {
+            margin: 15px 0;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Color Wing</h1>
+    <nav>
+        <a href='about.html'>About</a>
+        <a href='cases.html'>Cases</a>
+        <a href='contact.html'>Contact</a>
+    </nav>
+</header>
+
+<!-- HERO 大圖 -->
 <section class="hero">
     <div class="hero-content">
         <h1>COLOR WING</h1>
         <p>Modern Office Design · Workspace Solutions</p>
     </div>
 </section>
-<section><h3>Products</h3><ul><li><a href='products/workstations.html'>Workstations</a></li><li><a href='products/executive_desks.html'>Executive Desks</a></li><li><a href='products/sofas.html'>Sofas</a></li><li><a href='products/partitions.html'>Partitions</a></li><li><a href='products/discussion_sets.html'>Discussion Sets</a></li><li><a href='products/meeting_tables.html'>Meeting Tables</a></li><li><a href='products/office_chairs.html'>Office Chairs</a></li></ul></section></body></html>
+
+<!-- 3 大產品卡片 -->
+<section class="home-cards">
+
+    <a class="home-card" href="products/partitions.html">
+        <img src="images/202503220134470.jpg" alt="Partition">
+        <h3>Partition</h3>
+    </a>
+
+    <a class="home-card" href="products/office_chairs.html">
+        <img src="images/1765345756410.jpg" alt="Office Chair">
+        <h3>Office Chair</h3>
+    </a>
+
+    <a class="home-card" href="products/meeting_tables.html">
+        <img src="images/1765337407099.jpg" alt="Meeting Table">
+        <h3>Meeting Table</h3>
+    </a>
+
+</section>
+
+<!-- 產品列表 -->
+<section>
+    <h3>Products</h3>
+    <ul>
+        <li><a href='products/workstations.html'>Workstations</a></li>
+        <li><a href='products/executive_desks.html'>Executive Desks</a></li>
+        <li><a href='products/sofas.html'>Sofas</a></li>
+        <li><a href='products/partitions.html'>Partitions</a></li>
+        <li><a href='products/discussion_sets.html'>Discussion Sets</a></li>
+        <li><a href='products/meeting_tables.html'>Meeting Tables</a></li>
+        <li><a href='products/office_chairs.html'>Office Chairs</a></li>
+    </ul>
+</section>
+
+</body>
+</html>
