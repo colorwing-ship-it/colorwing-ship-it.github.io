@@ -21,7 +21,6 @@
             text-align: center;
         }
     </style>
-
 </head>
 
 <body>
@@ -32,6 +31,7 @@
         <a href="../index.html">Home</a>
         <a href="../about.html">About</a>
         <a href="../cases.html">Cases</a>
+        <a href="../products.html">Products</a>
         <a href="../contact.html">Contact</a>
     </nav>
 </header>
@@ -43,7 +43,8 @@
 <section class="gallery" id="gallery"></section>
 
 <script>
-const folder = "https://raw.githubusercontent.com/colorwing-ship-it/colorwing-ship-it.github.io/main/images/office_chairs/";
+// ★ 確保與你 GitHub 圖片資料夾名稱一致
+const folder = "https://raw.githubusercontent.com/colorwing-ship-it/colorwing-ship-it.github.io/main/images/products/office-chair/";
 
 const images = [
     "1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg",
@@ -55,7 +56,7 @@ const gallery = document.getElementById("gallery");
 
 images.forEach(img => {
     const item = document.createElement("div");
-    item.innerHTML = `<img src="${folder + img}" alt="">`;
+    item.innerHTML = `<img src="${folder + img}" alt="office chair">`;
     gallery.appendChild(item);
 });
 </script>
