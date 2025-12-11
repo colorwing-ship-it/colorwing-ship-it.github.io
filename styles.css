@@ -1,4 +1,26 @@
-body{font-family:sans-serif;background:#0d1b2a;color:white;margin:0;}header{display:flex;justify-content:space-between;padding:20px;background:#1b263b;}a{color:#e0e1dd;margin:0 10px;} .hero {
+body {
+    font-family: sans-serif;
+    background: #0d1b2a;
+    color: white;
+    margin: 0;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #1b263b;
+}
+
+a {
+    color: #e0e1dd;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* HERO BANNER（首頁大圖） */
+.hero {
     width: 100%;
     height: 60vh;
     background: linear-gradient(rgba(0,10,40,0.5), rgba(0,10,40,0.5)),
@@ -12,6 +34,7 @@ body{font-family:sans-serif;background:#0d1b2a;color:white;margin:0;}header{disp
 .hero-content h1 {
     font-size: 3rem;
     letter-spacing: 3px;
+    margin: 0;
 }
 
 .hero-content p {
