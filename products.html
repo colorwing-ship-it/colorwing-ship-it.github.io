@@ -1,1 +1,71 @@
-<!doctype html><html lang='zh-Hant'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>產品介紹</title><link rel='stylesheet' href='styles.css'></head><body><header><div class='brand'>彩翼有限公司</div></header><main class='container'><h1>產品分類</h1><div class='grid'><a class='product-card' href='products/office_chairs.html'><img src='images/office_chairs/office_chairs_001.jpg' alt=''><h3>Office Chairs</h3></a><a class='product-card' href='products/discussion_sets.html'><img src='images/discussion_sets/discussion_sets_001.jpg' alt=''><h3>Discussion Sets</h3></a><a class='product-card' href='products/executive_tables.html'><img src='images/executive_tables/executive_tables_001.jpg' alt=''><h3>Executive Tables</h3></a><a class='product-card' href='products/meeting_tables.html'><img src='images/meeting_tables/meeting_tables_001.jpg' alt=''><h3>Meeting Tables</h3></a><a class='product-card' href='products/workstations.html'><img src='images/workstations/workstations_001.jpg' alt=''><h3>Workstations</h3></a><a class='product-card' href='products/partitions.html'><img src='images/partitions/partitions_001.jpg' alt=''><h3>Partitions</h3></a><a class='product-card' href='products/sofas.html'><img src='images/sofas/sofas_001.jpg' alt=''><h3>Sofas</h3></a><a class='product-card' href='products/cases.html'><img src='images/cases/cases_001.jpg' alt=''><h3>Cases</h3></a></div></main></body></html>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <title>辦公椅 Office Chairs - Color Wing</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../styles.css"> <!-- 視你專案路徑調整 -->
+  <style>
+    .gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; padding:20px; max-width:1200px; margin:0 auto;}
+    .card{ background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 8px 18px rgba(0,0,0,0.06); text-align:center; }
+    .card img{ width:100%; height:260px; object-fit:cover; display:block; }
+    .caption{ padding:12px; font-weight:700; color:#111; }
+    h1{ text-align:left; max-width:1200px; margin:28px auto 6px; padding:0 20px; font-size:28px;}
+    @media(max-width:640px){ .card img{ height:180px; } h1{ font-size:22px } }
+  </style>
+</head>
+<body>
+  <header> <!-- 你現有 header --> 
+    <div style="padding:18px 20px;background:#132034;color:#fff;"><a href="../index.html" style="color:#fff;text-decoration:none;font-weight:700;">彩翼有限公司</a></div>
+  </header>
+
+  <main>
+    <h1>辦公椅 Office Chairs</h1>
+
+    <div id="gallery" class="gallery">
+      <!-- JS 會把卡片插入在這 -->
+    </div>
+  </main>
+
+<script>
+/*
+  自動偵測 images/office_chairs/office_chairs_001.jpg ... 050.jpg
+  有 200 回應才加入畫面。可根據實際數量調整 maxIndex。
+*/
+const folder = "https://raw.githubusercontent.com/colorwing-ship-it/colorwing-ship-it.github.io/main/images/office_chairs/";
+const gallery = document.getElementById('gallery');
+const pad = (n)=> String(n).padStart(3,'0');
+
+async function addImageIfExists(idx){
+  const fname = `office_chairs_${pad(idx)}.jpg`;
+  const url = folder + fname;
+  try{
+    const resp = await fetch(url, { method:'HEAD' }); // 用 HEAD 先檢查
+    if(resp.ok){
+      const div = document.createElement('div');
+      div.className = 'card';
+      div.innerHTML = `<img src="${url}" alt="${fname}" loading="lazy"><div class="caption">${fname}</div>`;
+      gallery.appendChild(div);
+      return true;
+    }
+  }catch(e){
+    // ignore
+  }
+  return false;
+}
+
+(async ()=>{
+  // 1..50 偵測；遇到連續 10 個不存在就停止（節省請求）
+  let missCount = 0;
+  for(let i=1;i<=50;i++){
+    const ok = await addImageIfExists(i);
+    if(!ok) missCount++; else missCount = 0;
+    if(missCount>=10) break;
+  }
+  if(gallery.children.length===0){
+    gallery.innerHTML = `<div style="grid-column:1/-1;padding:30px;text-align:center;background:#fff;border-radius:8px;">目前尚無圖片</div>`;
+  }
+})();
+</script>
+</body>
+</html>
