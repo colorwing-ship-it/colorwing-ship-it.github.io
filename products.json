@@ -1,9 +1,46 @@
 {
-  "office_chairs": [],
-  "discussion_sets": [],
-  "executive_tables": [],
-  "meeting_tables": [],
-  "workstations": [],
-  "partitions": [],
-  "sofas": []
+  "products": [
+    {
+      "id": "office_chairs",
+      "name_zh": "辦公椅",
+      "name_en": "Office Chairs",
+      "folder": "office_chairs"
+    },
+    {
+      "id": "executive_tables",
+      "name_zh": "主管桌",
+      "name_en": "Executive Tables",
+      "folder": "executive_tables"
+    },
+    {
+      "id": "meeting_tables",
+      "name_zh": "會議桌",
+      "name_en": "Meeting Tables",
+      "folder": "meeting_tables"
+    },
+    {
+      "id": "workstations",
+      "name_zh": "工作站",
+      "name_en": "Workstations",
+      "folder": "workstations"
+    },
+    {
+      "id": "partitions",
+      "name_zh": "屏風",
+      "name_en": "Partitions",
+      "folder": "partitions"
+    },
+    {
+      "id": "sofas",
+      "name_zh": "沙發",
+      "name_en": "Sofas",
+      "folder": "sofas"
+    },
+    {
+      "id": "discussion_sets",
+      "name_zh": "洽談桌椅",
+      "name_en": "Discussion Table / Chair",
+      "folder": "discussion_sets"
+    }
+  ]
 }
