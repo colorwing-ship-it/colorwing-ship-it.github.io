@@ -1,3 +1,6 @@
+const BASE_PATH = location.pathname.includes('/products/')
+  ? '..'
+  : '.';
 fetch("/products.json")
   .then(res => res.json())
   .then(data => {
