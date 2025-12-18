@@ -10,7 +10,7 @@ fetch("/products.json")
       card.className = "product-card";
 
       const img = document.createElement("img");
-      img.src = `images/${product.folder}/${product.folder}_001.jpg`;
+      img.src = `../images/${product.folder}/${product.folder}_001.jpg`;
       img.alt = product.name_en;
 
       const title = document.createElement("div");
